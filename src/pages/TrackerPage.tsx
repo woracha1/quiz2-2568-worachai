@@ -1,19 +1,11 @@
-import { useState } from "react";
-import { Button, Stack, Title, Divider, Container } from "@mantine/core";
-import { v4 as uuidv4 } from "uuid";
 
-type FoodItem = {
-  id: string;
-  name: string;
-  price: number | string;
-  quantity: number | string;
-  category: string;
-};
+import { Button, Stack, Title, Divider, Container } from "@mantine/core";
+
+
+
 
 export default function FoodTracker() {
-  const [opened, setOpened] = useState(false);
-  const [items, setItems] = useState<FoodItem[]>([]);
-  const categories = ["Main Course", "Drink", "Dessert"];
+
 
   return (
     <Container style={{ maxWidth: 600, margin: "auto", padding: 20 }}>
@@ -25,8 +17,11 @@ export default function FoodTracker() {
 
       <Divider my="md" />
       {/* Type additional total cost here. */}
-      <Title order={4}>Total cost: {} Baht</Title>
-      <Stack my="sm">{/* Type additional text here. */}</Stack>
+      <Title order={4}>Total: {} Baht</Title>
+      <Stack my="sm">Main Course: {} Baht</Stack>
+      <Stack my="sm">Drinks: {} Baht</Stack>
+      <Stack my="sm">Dessert: {} Baht</Stack>
+
 
       <Divider my="md" />
       {/* Type additional card here. */}
